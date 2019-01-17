@@ -26,6 +26,8 @@ public class backend {
 //        设定密匙长度 默认1024
         kpg.initialize(512);
         KeyPair keyPair = kpg.generateKeyPair();
+
+
         byte[] publicKey = keyPair.getPublic().getEncoded();
         byte[] privateKey = keyPair.getPrivate().getEncoded();
         //可视化处理
@@ -39,6 +41,21 @@ public class backend {
         System.out.println("----------------------------- Private Key -----------------------------");
         System.out.println(privateKeyDisp);
 
+
+
+
+        byte[] publicKey2 = keyPair.getPublic().getEncoded();
+        byte[] privateKey2 = keyPair.getPrivate().getEncoded();
+        //可视化处理
+        String publicKeyDisp2 = Base64.encode(publicKey2);
+        String privateKeyDisp2 = Base64.encode(privateKey2);
+
+        String text2 = "123456";
+
+        System.out.println("----------------------------- Public Key -----------------------------");
+        System.out.println(publicKeyDisp2);
+        System.out.println("----------------------------- Private Key -----------------------------");
+        System.out.println(privateKeyDisp2);
 //
         //数据加密
 
